@@ -1,0 +1,44 @@
+{
+    "name": "alainevidal/buscador-cursos",
+    "description": "Projeto que busca os cursos no site da Alura",
+    "version": "1.0.0",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Alaine",
+            "email": "alainevidal2806@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.9",
+        "symfony/dom-crawler": "^7.2.0",
+        "symfony/css-selector": "^7.2"
+    },
+    "autoload": {
+        "files": ["./functions.php"],
+        "psr-4": {
+            "Alainevidal\\BuscadorCursos\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.5",
+        "squizlabs/php_codesniffer": "^3.11",
+        "phan/phan": "^5.4"
+    },
+    "scripts": {
+        "test": "php src/Buscador.php",
+        "cs": "phpcs --standard=PSR12 src/",
+        "phan": "phan --allow-polyfill-parser",
+        "check": [
+            "@phan",
+            "@cs",
+            "@test"
+        ],
+        "post-update-cmd": [
+            "@test"
+        ]
+    },
+    "scripts-descriptions": {
+        "check": "Roda as verificações do código. PHAN, PHPCS e PHPUNIT"
+    }
+}
