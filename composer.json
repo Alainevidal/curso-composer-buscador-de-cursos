@@ -1,7 +1,8 @@
 {
     "name": "alainevidal/buscador-cursos",
     "description": "Projeto que busca os cursos no site da Alura",
-    "version": "1.0.0",
+    "version": "1.0.1",
+    "license": "MIT",
     "type": "library",
     "authors": [
         {
@@ -41,6 +42,5 @@
     "scripts-descriptions": {
         "check": "Roda as verificações do código. PHAN, PHPCS e PHPUNIT"
     },
-    "license": "MIT",
     "bin": ["buscar-cursos.php"]
 }
